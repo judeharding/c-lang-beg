@@ -81,22 +81,132 @@
 
 /* copy input to output - 1st version*/
 
-int main()
-{
-  int c;
-  c = getchar();
-  while (c != EOF)
-  {
-    putchar(c);
-    c = getchar();
-  }
-}
+// int main()
+// {
+//   int c;
+//   c = getchar();
+//   while (c != EOF)
+//   {
+//     putchar(c);
+//     c = getchar();
+//   }
+// }
 // testing change
 // smaller version of above
 //   while((c = getchar()) != EOF)
 //     putchar(c);
 
+// int main()
+// {
+//   int c;
+
+//   while ((c = getchar()) != EOF)
+//     putchar(c);
+// }
+
 // ========== exercise 1.6
 // c = getchar();
 // printf("%5d", c); // looks like this returns the ASCII code
 // }
+
+// int main()
+// {
+//   long nc;
+
+//   nc = 0;
+
+//   while (getchar() != EOF)
+//     ++nc;
+//   printf("%ld\n", nc);
+// }
+
+// found in stackoverflow because there is an error with the 1989 book version and current version of C
+// #define EOL '\n'
+
+// main()
+// {
+//   long nc;
+//   int c;
+//   nc = 0;
+
+//   while ((c = getchar()) != EOF)
+//   {
+//     ++nc;
+//     if (c == EOL)
+//     {
+//       /* Print number of input characters (not including return character) */
+//       printf("%ld\n", nc - 1);
+//       nc = 0;
+//     }
+//   }
+// }
+
+// DOESN'T WORK
+// int main()
+// {
+//   double nc;
+
+//   for (nc = 0; getchar() != EOF; ++nc)
+//     ;
+//   printf("%.0f\n", nc);
+// }
+
+// DOES work - from stack overflow 1.5.2
+// #define EOL '\n'
+
+// main()
+// {
+//   double nc;
+//   int c;
+//   nc = 0;
+
+//   while ((c = getchar()) != EOF)
+//   {
+//     ++nc;
+//     if (c == EOL)
+//     {
+//       /* Print number of input characters (not including return character) */
+//       printf("%.0f\n", nc - 1);
+//       nc = 0;
+//     }
+//   }
+// }
+
+// ========== exercise 1.8 page 20 STUCK
+
+// int main()
+// {
+//   int c, n1;
+
+//   n1 = 0;
+
+//   while ((c = getchar()) != EOF)
+//   {
+//     if (c == '\n')
+//       ++n1;
+//     c = getchar();
+
+//     putchar(c);
+//     c = getchar();
+
+//     printf("%d\n\n", n1);
+//     // n1 = 0;
+//   }
+// }
+
+int main()
+{
+  int c;
+  while ((c = getchar()) != EOF)
+  {
+    if (c == ' ')
+    {
+      while ((c = getchar()) == ' ')
+        ;
+      putchar(' ');
+      if (c == EOF)
+        break;
+    }
+    putchar(c);
+  }
+}
