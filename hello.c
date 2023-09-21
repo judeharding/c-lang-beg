@@ -91,7 +91,7 @@ int main()
     c = getchar();
   }
 }
-
+// testing change
 // smaller version of above
 //   while((c = getchar()) != EOF)
 //     putchar(c);
