@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 // ========== section 1.1
-// int main(void)
+// main()
 // {
 //   printf("hello, mike\n");
-//   return 0;
+//   // return 0;
 // }
 
 // ========== section 1.2
@@ -51,30 +51,41 @@
 
 // ========= Section 1.3
 /* print Fahrenheit-Celsius table */
-// int main(){
+// int main()
+// {
 //   int fahr;
 
-//   for (fahr = 0; fahr <=300; fahr = fahr + 20){
-//     printf(" %3d %6.1f \n", fahr, (5.0/9.0) * (fahr-32));
+//   for (fahr = 0; fahr <= 300; fahr = fahr + 20)
+//   {
+//     printf(" %3d %6.1f \n", fahr, (5.0 / 9.0) * (fahr - 32));
 //   }
-
+// }
 //   // ===== exercise 1.5 print table in reverse
+
+// int main()
+// {
+//   int fahr;
+
 //   printf("\n \n REVERSE t table \n \n");
-//   for (fahr = 300; fahr >=0; fahr = fahr - 20){
-//     printf(" %3d %6.1f \n", fahr, (5.0/9.0) * (fahr-32));
+//   for (fahr = 300; fahr >= 0; fahr = fahr - 20)
+//   {
+//     printf(" %3d %6.1f \n", fahr, (5.0 / 9.0) * (fahr - 32));
 //   }
 // }
 
-// // ========= Section 1.4
-// #define LOWER 0     /* symbolic constants are not vars & start with #define */
-// #define UPPER 300   /* must start with a letter */
-// #define STEP 20     /* their replacement can be numbers or letters & no semicolen */
+//
 
-// int main(){
+// // ========= Section 1.4
+// #define LOWER 0   /* symbolic constants are not vars & start with #define */
+// #define UPPER 300 /* must start with a letter */
+// #define STEP 20   /* their replacement can be numbers or letters & no semicolen */
+
+// int main()
+// {
 //   int fahr;
 
-//   for ( fahr = LOWER; fahr <= UPPER; fahr = fahr + STEP)
-//     printf("%3d %6.1f \n", fahr, (5.0/9.0) * (fahr-32));
+//   for (fahr = LOWER; fahr <= UPPER; fahr = fahr + STEP)
+//     printf("%3d %6.1f \n", fahr, (5.0 / 9.0) * (fahr - 32));
 // }
 
 // ========= Section 1.5
@@ -104,7 +115,27 @@
 //     putchar(c);
 // }
 
+// int main()
+// {
+
+//   int c;
+//   c = getchar() != EOF;
+//   // if ((c = getchar()) == EOF)
+
+//   putchar(c);
+// }
+
 // ========== exercise 1.6
+
+int main()
+{
+  int c;
+
+  while ((c = getchar()) != EOF)
+    printf("%d\n", c);
+}
+
+// OR
 // c = getchar();
 // printf("%5d", c); // looks like this returns the ASCII code
 // }
@@ -194,19 +225,19 @@
 //   }
 // }
 
-int main()
-{
-  int c;
-  while ((c = getchar()) != EOF)
-  {
-    if (c == ' ')
-    {
-      while ((c = getchar()) == ' ')
-        ;
-      putchar(' ');
-      if (c == EOF)
-        break;
-    }
-    putchar(c);
-  }
-}
+// int main()
+// {
+//   int c;
+//   while ((c = getchar()) != EOF)
+//   {
+//     if (c == ' ')
+//     {
+//       while ((c = getchar()) == ' ')
+//         ;
+//       putchar(' ');
+//       if (c == EOF)
+//         break;
+//     }
+//     putchar(c);
+//   }
+// }
