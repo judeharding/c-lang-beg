@@ -127,13 +127,13 @@
 
 // ========== exercise 1.6
 
-int main()
-{
-  int c;
+// int main()
+// {
+//   int c;
 
-  while ((c = getchar()) != EOF)
-    printf("%d\n", c);
-}
+//   while ((c = getchar()) != EOF)
+//     printf("%d\n", c);
+// }
 
 // OR
 // c = getchar();
@@ -241,3 +241,34 @@ int main()
 //     putchar(c);
 //   }
 // }
+
+int main()
+{
+
+  printf("      ^ \n");
+  printf("     / |\n");
+  printf("    /  |\n");
+  printf("   /   |\n");
+  printf("  /    |\n");
+  printf(" /     |\n");
+  printf("________\n");
+  printf("500.123");
+
+  // to create a file and Write in it
+  // FILE *fpointer = fopen("employees.txt", "w");
+  // fprintf(fpointer, "Jim , Salesman \nPhil, Receptionist \nOscar, Accounting");
+
+  // to Append
+  // FILE *fpointer = fopen("employees.txt", "a");
+  // fprintf(fpointer, "\nKelly, Customer Service");
+
+  // to Read
+
+  char line[255];
+  FILE *fpointer = fopen("employees.txt", "r");
+  fgets(line, 255, fpointer);
+  printf("%s ", line);
+
+  fclose(fpointer);
+  return 0;
+}
