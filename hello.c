@@ -252,7 +252,7 @@ int main()
   printf("  /    |\n");
   printf(" /     |\n");
   printf("________\n");
-  printf("500.123");
+  printf("\n\n\n500.123");
 
   // to create a file and Write in it
   // FILE *fpointer = fopen("employees.txt", "w");
